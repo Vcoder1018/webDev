@@ -1,0 +1,283 @@
+* {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0px;
+}
+
+    article:hover h2{
+        background: seagreen;
+    }
+    
+    article:hover{
+        box-shadow: 0px 0px 5px black;
+    }
+
+
+body {
+    background-color: #eee;
+    padding: 0px;
+}
+
+.heading {
+    background-color: seagreen;
+    padding: 0px;
+    padding: 10px;
+    color: white;
+}
+
+.view{
+    display: none;
+}
+
+h2 {
+    margin-left: 30px;
+    user-select: none;
+}
+
+nav {
+    background-color: #333;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+ul {
+    display: block;
+    list-style-type: none;
+}
+
+li {
+    justify-content: center;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    display: block;
+}
+
+.opts li:hover {
+    background: #666;
+}
+
+.btns,
+.opts {
+    margin: 0px;
+    padding: 0px;
+}
+
+.btns li {
+    margin: 0px;
+    padding: 0px;
+    flex-grow: 1;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.btns {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    background: #333;
+}
+
+.btn {
+    border: none;
+    color: white;
+    background: #000;
+    min-width: 100%;
+    flex-grow: 1;
+    height: 50px;
+    user-select: none;
+    transition: .3s;
+    display: block;
+    width: 50%;
+}
+
+.btn:hover {
+    background: #222;
+}
+
+.social {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0x;
+    max-width: 60px;
+}
+
+.social img {
+    margin: 0px auto;
+    margin: 0px 0px 0px 5px;
+    padding: 5px 10px 0px 0px;
+}
+
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+article {
+    padding: 10px;
+    margin: 10px;
+    flex-basis: 100%;
+    box-sizing: border-box;
+    flex-grow: 1;
+    user-select: none;
+    cursor: default;
+}
+
+article h2 {
+    display: block;
+    text-align: center;
+    background: black;
+    color: white;
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+/*FlexBox responses*/
+
+@media screen and (min-width:768px) {
+    .heading {
+        display: flex;
+        background-color: seagreen;
+        padding: 0px;
+        padding: 10px;
+        color: white;
+        justify-content: space-between;
+    }
+    
+    .view{
+        display: flex;
+        flex-basis: 100px;
+        margin-top: 5px;
+    }
+    
+    .grid,.stack{
+        min-width: 50px;
+/*        box-sizing: border-box;*/
+        margin: 0px 0px 0px 5px;
+    }
+    
+    
+
+    h2 {
+        margin-left: 30px;
+        user-select: none;
+    }
+
+
+    nav {
+        background-color: #333;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+    }
+
+    ul {
+        display: flex;
+        list-style-type: none;
+    }
+
+    .opts {
+        display: flex;
+        flex-basis: 600px
+    }
+
+    .opts li {
+        margin: 0px;
+        padding: 10px;
+        text-align: center;
+        flex-basis: 100px;
+        user-select: none;
+        transition: .2s;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+
+    .opts li:hover {
+        background: #666;
+    }
+
+    .btns li {
+        margin-top: 8px;
+        margin-left: 5px;
+        margin-right: 5px;
+        flex-grow: 0;
+    }
+
+    .social {
+        display: none;
+        background: black;
+    }
+
+    li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .btn {
+        border: 1px solid dimgray;
+        color: white;
+        background: #000;
+        min-width: 70px;
+        height: 30px;
+        user-select: none;
+        border-radius: 3px;
+        transition: .3s;
+    }
+
+    .btn:hover {
+        background: #222;
+    }
+
+    .articles {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    article {
+        padding: 10px;
+        margin: 10px;
+        flex-basis: 30%;
+        box-sizing: border-box;
+        flex-grow: 1;
+        transition: .7s;
+    }
+    
+    article:hover h2{
+        background: seagreen;
+    }
+    
+    article:hover{
+        box-shadow: 0px 0px 5px black;
+    }
+
+    article h2 {
+        display: inline-block;
+        text-align: center;
+        background: black;
+        color: white;
+        width: 100%;
+        margin-left: -0px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+/*        transition: 1s;*/
+    }
+
+    article.stack{
+        flex-grow: 1;
+        flex-basis: 100%;
+        min-width: 90%;
+        transition: 1s;
+        margin-right: 5px;
+    }
+    
+}
